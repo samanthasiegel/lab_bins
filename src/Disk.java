@@ -71,11 +71,7 @@ public class Disk implements Comparable<Disk> {
     @Override
     public boolean equals (Object other) {
         if (other != null && other instanceof Disk) {
-            if (myId == ((Disk) other).myId) {
-                return true;
-            } else {
-                return false;
-            }
+        	return (myId==((Disk)other).myId)?true:false;
         } else {
             return false;
         }
@@ -94,11 +90,7 @@ public class Disk implements Comparable<Disk> {
     public int compareTo (Disk other) {
         if (other != null) {
             int result = other.freeSpace() - freeSpace();
-            if (result == 0) {
-                return myId - other.myId;
-            } else {
-                return result;
-            }
+            return (result==0)?myId-other.myId:result;
         } else {
             return -1;
         }

@@ -72,8 +72,7 @@ public class Bins {
                 d.add(size);
                 pq.add(d);
             } else {
-                Disk d2 = new Disk(diskId);
-                diskId++;
+                Disk d2 = new Disk(diskId++);
                 d2.add(size);
                 pq.add(d2);
             }
