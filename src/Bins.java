@@ -35,10 +35,8 @@ public class Bins {
         List<Integer> data = b.readData(input);
 
         PriorityQueue<Disk> pq = new PriorityQueue<Disk>();
-        pq.add(new Disk(0));
-
-        int diskId = 1;
-        int total = 0;
+        int diskId = 0, total = 0;
+        pq.add(new Disk(diskId++));
         for (Integer size : data) {
             Disk d = pq.peek();
             if (d.freeSpace() > size) {
