@@ -1,0 +1,51 @@
+CS 308 - Recitation 1, Bins
+Cody Li (cl305), Samantha Siegel (sps27) 
+
+Readability
+
+What pieces of code help versus obscure your understanding of the algorithm?
+
+	Good naming of variables and methods help tell us what each part of the code is doing. For example, the method "readData" tells us that that method is used to take in input from an external file and then place the data into a List. 
+
+What comments might be helpful within the code? 
+
+	Comments throughout a method helps inform the reader about what is going on during that specific piece of code. I personally like to use comments to explain if-else branches and what conditions satisfies each branch. Comments also help briefly describe the arguments of a method, what it actually does, and what it returns. 
+
+Are there places where the code could be more concise or clear? 
+
+	The main method in the Bins class could definitely be broken up to more manageable parts to help readability. 
+
+
+Testability
+
+How would you test this code for bugs?
+
+	Because this code takes in text files as inputs, the first thing that comes to find is to write a bunch of different test files, such as large and small number of files. Another way to test for bugs is to make sure that each method is returning correctly, which you can do by coding in print statements as well as create a JUnit test file. 
+
+Give a specific example of a "test case" as the code is currently written
+	
+	A test case for the code could be: 
+		100000	100000	41234	837247	428392
+	where we would at first find the most optimum packing by hand and then run the test case as the input for the code and then compare the outputs. 
+
+What Code Smells can you find? 
+
+	The Bloaters (main method)
+	Duplicate code 
+	Lazy class
+
+What suggestions does this code make about how someone would extend it in the future to compare the performance of a wider variety of fitting algorithms?
+
+	This code suggests that grouping data based on the largest size and the smallest size is the most optimal.		
+
+What dependencies are there between different parts of the code?
+
+	Disk is a helper class that creates the Disk object as well as implements the comparison of file sizes in the List, so the Bins class is dependent on the correct output of the Disk class 
+
+How easy to find are those dependencies?
+
+	It was easy to see that the Bins class depended on the Disk class because of the fact that the Disk class implements a comparator. 
+
+Can you clarify or remove those dependencies?
+	
+	We cannot remove this dependency but we can make it clearer that the Disk class is necessary for the successful compilation and execution of the Bins class.
