@@ -5,9 +5,7 @@ import java.util.List;
  * Represents a collection of files; how many it can hold is limited by its capacity.
  */
 public class Disk implements Comparable<Disk> {
-    private int myId;
-    private int mySize;
-    private int myCapacity;
+    private int myId, mySize, myCapacity;
     private List<Integer> myFiles;
 
     /**
